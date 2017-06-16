@@ -1,0 +1,162 @@
+major: 3 minor: 0 memoryClockRate (GHz) 0.797
+pciBusID 0000:00:06.0
+Total memory: 3.94GiB
+Free memory: 3.91GiB
+2017-06-06 07:01:26.410683: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 0 and 1
+2017-06-06 07:01:26.410737: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 0 and 2
+2017-06-06 07:01:26.410760: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 0 and 3
+2017-06-06 07:01:26.410783: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 1 and 0
+2017-06-06 07:01:26.410813: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 1 and 2
+2017-06-06 07:01:26.410862: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 1 and 3
+2017-06-06 07:01:26.410916: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 2 and 0
+2017-06-06 07:01:26.410968: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 2 and 1
+2017-06-06 07:01:26.411019: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 2 and 3
+2017-06-06 07:01:26.411071: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 3 and 0
+2017-06-06 07:01:26.411122: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 3 and 1
+2017-06-06 07:01:26.411166: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 3 and 2
+2017-06-06 07:01:26.411262: I tensorflow/core/common_runtime/gpu/gpu_device.cc:908] DMA: 0 1 2 3
+2017-06-06 07:01:26.411281: I tensorflow/core/common_runtime/gpu/gpu_device.cc:918] 0:   Y N N N
+2017-06-06 07:01:26.411292: I tensorflow/core/common_runtime/gpu/gpu_device.cc:918] 1:   N Y N N
+2017-06-06 07:01:26.411302: I tensorflow/core/common_runtime/gpu/gpu_device.cc:918] 2:   N N Y N
+2017-06-06 07:01:26.411309: I tensorflow/core/common_runtime/gpu/gpu_device.cc:918] 3:   N N N Y
+2017-06-06 07:01:26.411326: I tensorflow/core/common_runtime/gpu/gpu_device.cc:977] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GRID K520, pci bus id: 0000:00:03.0)
+2017-06-06 07:01:26.411339: I tensorflow/core/common_runtime/gpu/gpu_device.cc:977] Creating TensorFlow device (/gpu:1) -> (device: 1, name: GRID K520, pci bus id: 0000:00:04.0)
+2017-06-06 07:01:26.411351: I tensorflow/core/common_runtime/gpu/gpu_device.cc:977] Creating TensorFlow device (/gpu:2) -> (device: 2, name: GRID K520, pci bus id: 0000:00:05.0)
+2017-06-06 07:01:26.411362: I tensorflow/core/common_runtime/gpu/gpu_device.cc:977] Creating TensorFlow device (/gpu:3) -> (device: 3, name: GRID K520, pci bus id: 0000:00:06.0)
+Device mapping:
+/job:localhost/replica:0/task:0/gpu:0 -> device: 0, name: GRID K520, pci bus id: 0000:00:03.0
+/job:localhost/replica:0/task:0/gpu:1 -> device: 1, name: GRID K520, pci bus id: 0000:00:04.0
+/job:localhost/replica:0/task:0/gpu:2 -> device: 2, name: GRID K520, pci bus id: 0000:00:05.0
+/job:localhost/replica:0/task:0/gpu:3 -> device: 3, name: GRID K520, pci bus id: 0000:00:06.0
+2017-06-06 07:01:26.545124: I tensorflow/core/common_runtime/direct_session.cc:257] Device mapping:
+/job:localhost/replica:0/task:0/gpu:0 -> device: 0, name: GRID K520, pci bus id: 0000:00:03.0
+/job:localhost/replica:0/task:0/gpu:1 -> device: 1, name: GRID K520, pci bus id: 0000:00:04.0
+/job:localhost/replica:0/task:0/gpu:2 -> device: 2, name: GRID K520, pci bus id: 0000:00:05.0
+/job:localhost/replica:0/task:0/gpu:3 -> device: 3, name: GRID K520, pci bus id: 0000:00:06.0
+
+MatMul: (MatMul): /job:localhost/replica:0/task:0/gpu:0
+2017-06-06 07:01:26.546401: I tensorflow/core/common_runtime/simple_placer.cc:841] MatMul: (MatMul)/job:localhost/replica:0/task:0/gpu:0
+b: (Const): /job:localhost/replica:0/task:0/gpu:0
+2017-06-06 07:01:26.546424: I tensorflow/core/common_runtime/simple_placer.cc:841] b: (Const)/job:localhost/replica:0/task:0/gpu:0
+a: (Const): /job:localhost/replica:0/task:0/gpu:0
+2017-06-06 07:01:26.546438: I tensorflow/core/common_runtime/simple_placer.cc:841] a: (Const)/job:localhost/replica:0/task:0/gpu:0
+[[ 22.  28.]
+ [ 49.  64.]]
+[ec2-user@ip-172-31-45-120 run]$ python3 VGG16_Kg_Kernel.py
+running
+x_train (32383, 224, 224, 3)
+y_train (32383,)
+x_test (8096, 224, 224, 3)
+y_test (8096,)
+Using TensorFlow backend.
+2017-06-06 07:05:50.147037: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-06-06 07:05:50.147086: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-06-06 07:05:50.147093: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-06-06 07:05:50.318801: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2017-06-06 07:05:50.319273: I tensorflow/core/common_runtime/gpu/gpu_device.cc:887] Found device 0 with properties:
+name: GRID K520
+major: 3 minor: 0 memoryClockRate (GHz) 0.797
+pciBusID 0000:00:03.0
+Total memory: 3.94GiB
+Free memory: 3.91GiB
+2017-06-06 07:05:50.319357: W tensorflow/stream_executor/cuda/cuda_driver.cc:485] creating context when one is currently active; existing: 0x2c6a6bd40
+2017-06-06 07:05:50.359683: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2017-06-06 07:05:50.360177: I tensorflow/core/common_runtime/gpu/gpu_device.cc:887] Found device 1 with properties:
+name: GRID K520
+major: 3 minor: 0 memoryClockRate (GHz) 0.797
+pciBusID 0000:00:04.0
+Total memory: 3.94GiB
+Free memory: 3.91GiB
+2017-06-06 07:05:50.360275: W tensorflow/stream_executor/cuda/cuda_driver.cc:485] creating context when one is currently active; existing: 0x2c6a6fad0
+2017-06-06 07:05:50.403131: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2017-06-06 07:05:50.403574: I tensorflow/core/common_runtime/gpu/gpu_device.cc:887] Found device 2 with properties:
+name: GRID K520
+major: 3 minor: 0 memoryClockRate (GHz) 0.797
+pciBusID 0000:00:05.0
+Total memory: 3.94GiB
+Free memory: 3.91GiB
+2017-06-06 07:05:50.403658: W tensorflow/stream_executor/cuda/cuda_driver.cc:485] creating context when one is currently active; existing: 0x2c6a73860
+2017-06-06 07:05:50.447887: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2017-06-06 07:05:50.448365: I tensorflow/core/common_runtime/gpu/gpu_device.cc:887] Found device 3 with properties:
+name: GRID K520
+major: 3 minor: 0 memoryClockRate (GHz) 0.797
+pciBusID 0000:00:06.0
+Total memory: 3.94GiB
+Free memory: 3.91GiB
+2017-06-06 07:05:50.448501: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 0 and 1
+2017-06-06 07:05:50.448527: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 0 and 2
+2017-06-06 07:05:50.448553: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 0 and 3
+2017-06-06 07:05:50.448574: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 1 and 0
+2017-06-06 07:05:50.448595: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 1 and 2
+2017-06-06 07:05:50.448617: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 1 and 3
+2017-06-06 07:05:50.448642: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 2 and 0
+2017-06-06 07:05:50.448668: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 2 and 1
+2017-06-06 07:05:50.448694: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 2 and 3
+2017-06-06 07:05:50.448719: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 3 and 0
+2017-06-06 07:05:50.448737: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 3 and 1
+2017-06-06 07:05:50.448765: I tensorflow/core/common_runtime/gpu/gpu_device.cc:779] Peer access not supported between device ordinals 3 and 2
+2017-06-06 07:05:50.448847: I tensorflow/core/common_runtime/gpu/gpu_device.cc:908] DMA: 0 1 2 3
+2017-06-06 07:05:50.448863: I tensorflow/core/common_runtime/gpu/gpu_device.cc:918] 0:   Y N N N
+2017-06-06 07:05:50.448875: I tensorflow/core/common_runtime/gpu/gpu_device.cc:918] 1:   N Y N N
+2017-06-06 07:05:50.448882: I tensorflow/core/common_runtime/gpu/gpu_device.cc:918] 2:   N N Y N
+2017-06-06 07:05:50.448892: I tensorflow/core/common_runtime/gpu/gpu_device.cc:918] 3:   N N N Y
+2017-06-06 07:05:50.448910: I tensorflow/core/common_runtime/gpu/gpu_device.cc:977] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GRID K520, pci bus id: 0000:00:03.0)
+2017-06-06 07:05:50.448922: I tensorflow/core/common_runtime/gpu/gpu_device.cc:977] Creating TensorFlow device (/gpu:1) -> (device: 1, name: GRID K520, pci bus id: 0000:00:04.0)
+2017-06-06 07:05:50.448934: I tensorflow/core/common_runtime/gpu/gpu_device.cc:977] Creating TensorFlow device (/gpu:2) -> (device: 2, name: GRID K520, pci bus id: 0000:00:05.0)
+2017-06-06 07:05:50.448950: I tensorflow/core/common_runtime/gpu/gpu_device.cc:977] Creating TensorFlow device (/gpu:3) -> (device: 3, name: GRID K520, pci bus id: 0000:00:06.0)
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+input_1 (InputLayer)         (None, 224, 224, 3)       0
+_________________________________________________________________
+block1_conv1 (Conv2D)        (None, 224, 224, 64)      1792
+_________________________________________________________________
+block1_conv2 (Conv2D)        (None, 224, 224, 64)      36928
+_________________________________________________________________
+block1_pool (MaxPooling2D)   (None, 112, 112, 64)      0
+_________________________________________________________________
+block2_conv1 (Conv2D)        (None, 112, 112, 128)     73856
+_________________________________________________________________
+block2_conv2 (Conv2D)        (None, 112, 112, 128)     147584
+_________________________________________________________________
+block2_pool (MaxPooling2D)   (None, 56, 56, 128)       0
+_________________________________________________________________
+block3_conv1 (Conv2D)        (None, 56, 56, 256)       295168
+_________________________________________________________________
+block3_conv2 (Conv2D)        (None, 56, 56, 256)       590080
+_________________________________________________________________
+block3_conv3 (Conv2D)        (None, 56, 56, 256)       590080
+_________________________________________________________________
+block3_pool (MaxPooling2D)   (None, 28, 28, 256)       0
+_________________________________________________________________
+block4_conv1 (Conv2D)        (None, 28, 28, 512)       1180160
+_________________________________________________________________
+block4_conv2 (Conv2D)        (None, 28, 28, 512)       2359808
+_________________________________________________________________
+block4_conv3 (Conv2D)        (None, 28, 28, 512)       2359808
+_________________________________________________________________
+block4_pool (MaxPooling2D)   (None, 14, 14, 512)       0
+_________________________________________________________________
+block5_conv1 (Conv2D)        (None, 14, 14, 512)       2359808
+_________________________________________________________________
+block5_conv2 (Conv2D)        (None, 14, 14, 512)       2359808
+_________________________________________________________________
+block5_conv3 (Conv2D)        (None, 14, 14, 512)       2359808
+_________________________________________________________________
+block5_pool (MaxPooling2D)   (None, 7, 7, 512)         0
+_________________________________________________________________
+sequential_1 (Sequential)    (None, 1)                 6423041
+=================================================================
+Total params: 21,137,729.0
+Trainable params: 21,137,729.0
+Non-trainable params: 0.0
+_________________________________________________________________
+Traceback (most recent call last):
+  File "VGG16_Kg_Kernel.py", line 160, in <module>
+    train_datagen.fit(x_train)
+  File "/home/ec2-user/src/anaconda3/lib/python3.5/site-packages/keras/preprocessing/image.py", line 648, in fit
+    x = np.copy(x)
+  File "/home/ec2-user/src/anaconda3/lib/python3.5/site-packages/numpy/lib/function_base.py", line 1497, in copy
+    return array(a, order=order, copy=True)
+MemoryError
+[ec2-user@ip-172-31-45-120 run]$
